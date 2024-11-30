@@ -1,0 +1,159 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  overflow-x: hidden; /* Mencegah scrolling horizontal */
+}
+
+header {
+  background: linear-gradient(to bottom,black, #0073e6,black);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: sticky; /* Membuat header tetap di atas saat scroll */
+  top: 0; /* Posisi tetap di atas */
+  z-index: 10; /* Agar header tetap di atas konten lain */
+}
+
+h1 {
+  margin: 0;
+}
+
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Tersembunyi di luar layar */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: left 0.3s ease; /* Animasi saat muncul */
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 15px 0;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.side-menu a:hover {
+  text-decoration: underline;
+}
+
+
+main {
+  padding: 20px;
+  padding-bottom: 60px; /* Memberikan ruang tambahan di bawah konten agar tidak tertutup footer */
+  background-image: url('background.jpg'); /* Ganti dengan URL atau path gambar Anda */
+  background-size: cover; /* Membuat gambar memenuhi area */
+  background-position: center; /* Menempatkan gambar di tengah */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  background-attachment: fixed; /* Membuat background tetap di posisinya */
+}
+
+.gallery-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  /* Membuat galeri bisa digulir secara vertikal */
+  max-height: none; /* Hapus atau biarkan tinggi galeri fleksibel */
+}
+
+.gallery-1 img {
+  width: 50%; /* Membuat gambar memenuhi lebar kontainer */
+  max-width: 50%; /* Membatasi lebar gambar agar tidak melampaui kontainer */
+  aspect-ratio: 1 / 1; /* Rasio gambar 16:9 */
+  object-fit: cover; /* Memastikan gambar tetap terpotong jika diperlukan */
+  display: block; /* Agar gambar menjadi elemen block dan bisa diposisikan */
+  margin: 0 auto; /* Menempatkan gambar di tengah secara horizontal */
+
+  border-radius: 5px;
+}
+
+
+.gallery-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  /* Membuat galeri bisa digulir secara vertikal */
+  max-height: none; /* Hapus atau biarkan tinggi galeri fleksibel */
+}
+
+.gallery-2 img {
+  width: 100%; /* Membuat gambar memenuhi lebar kontainer */
+  max-width: 100%; /* Membatasi lebar gambar agar tidak melampaui kontainer */
+  aspect-ratio: 2 / 3; /* Rasio gambar 16:9 */
+  object-fit: cover; /* Memastikan gambar tetap terpotong jika diperlukan */
+  display: block; /* Agar gambar menjadi elemen block dan bisa diposisikan */
+  margin: 0 auto; /* Menempatkan gambar di tengah secara horizontal */
+
+  border-radius: 5px;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  /* Membuat galeri bisa digulir secara vertikal */
+  max-height: none; /* Hapus atau biarkan tinggi galeri fleksibel */
+}
+
+.gallery img {
+  width: 100%; /* Membuat gambar memenuhi lebar kontainer */
+  max-width: 100%; /* Membatasi lebar gambar agar tidak melampaui kontainer */
+  aspect-ratio: 16 / 9; /* Rasio gambar 16:9 */
+  object-fit: cover; /* Memastikan gambar tetap terpotong jika diperlukan */
+  display: block; /* Agar gambar menjadi elemen block dan bisa diposisikan */
+  margin: 0 auto; /* Menempatkan gambar di tengah secara horizontal */
+  border: 2px solid #0073e6;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #0073e6 ;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 5; /* Memastikan footer berada di bawah konten */
+}
+
+/* Media Query untuk laptop */
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr); /* Dua foto per baris */
+  }
+}
