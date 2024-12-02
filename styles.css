@@ -1,0 +1,204 @@
+body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #a8d8f0, #27adc1);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+        }
+        
+        
+.container {
+    display: flex; /* Menggunakan flexbox untuk pengaturan tata letak */
+    align-items: center; /* Memastikan semua elemen sejajar vertikal */
+    padding: 25px; /* Menambahkan padding 20px di semua sisi */
+    max-width: 480px;
+    margin: 20px auto; /* Margin atas dan bawah 20px, margin kiri-kanan otomatis */
+    background-color: #ffffff; /* Latar belakang putih */
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    width: 150px; /* Ukuran foto */
+    height: 150px; /* Ukuran foto */
+    border-radius: 50%; /* Membuat foto berbentuk lingkaran */
+    overflow: hidden; /* Menghindari gambar keluar dari lingkaran */
+    border: 2px solid #000; /* Garis tepi foto */
+    flex-shrink: 0; /* Menghindari foto mengecil */
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga foto tetap proporsional */
+}
+
+.text-container {
+    margin-left: 30px; /* Jarak antara foto dan teks */
+    display: flex;
+    flex-direction: column; /* Mengatur teks menjadi kolom */
+    justify-content: flex-start; /* Menjaga teks berada di atas dalam container */
+    align-items: center; /* Menjaga teks sejajar kiri */
+    padding-right: 5px; /* Menambahkan jarak 10px dari kanan container */
+}
+
+.text-container h1 {
+    font-size: 60px; /* Ukuran besar untuk "TKJ A" */
+    font-weight: bold; /* Teks tebal */
+    margin: 0;
+    color: #333;
+    margin-bottom: -10px;
+}
+
+.text-container h2 {
+    font-size: 17px; /* Ukuran lebih kecil untuk "SMKN 5 Kuningan" */
+    font-weight: normal; /* Teks tidak tebal */
+    margin: 5px 0;
+    color: black;
+}
+
+.welcome-box {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+    background: linear-gradient(to right, #c3ff8d, #ef7cff); /* Gradasi kuning ke pink */
+    border-radius: 20px; /* Sudut melengkung */
+    text-align: center;
+    width: fit-content; /* Mengatur ukuran kotak sesuai teks */
+}
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        .nav-button {
+            background-color: #64ddf2;
+            border: none;
+            border-radius: 15px;
+            padding: 15px 20px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+            font-size: 23px;
+            font-weight: bold;
+            color: white;
+        }
+        .nav-button.active {
+            background-color: white;
+            padding: 15px 40px;
+            font-weight: bold;
+            color: #008080;
+        }
+        
+.line-box {
+  background-color: #71c6e8;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 195px;
+  box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+.profile-pic1 {
+    width: 100px; /* Ukuran foto */
+    height: 100px; /* Ukuran foto */
+    border-radius: 50%; /* Membuat foto berbentuk lingkaran */
+    overflow: hidden; /* Menghindari gambar keluar dari lingkaran */
+    border: 2px solid #000; /* Garis tepi foto */
+    flex-shrink: 0; /* Menghindari foto mengecil */
+}
+
+.profile-pic1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga foto tetap proporsional */
+}
+       
+       
+       
+.data-siswa {
+    margin: 20px 20px;
+    border: 2px solid #a8d8f0;
+    border-radius:10px;
+}
+
+.data-siswa h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 15px 10px auto;
+    text-align: center;
+    color: white;
+}
+
+.student-list {
+    display: flex;
+    gap: 30px; /* Jarak antar elemen */
+    overflow-x: auto; /* Scroll horizontal */
+    white-space: nowrap; /* Cegah elemen turun ke baris baru */
+    padding: 10px;
+    scrollbar-width: thin; /* Scrollbar lebih ramping (untuk Firefox) */
+    width: 370px; /* Hanya tampilkan 3 foto sekaligus */
+}
+
+.student-list::-webkit-scrollbar {
+    height: 8px; /* Tinggi scrollbar */
+}
+
+.student-list::-webkit-scrollbar-thumb {
+    background-color: #71c6e8; /* Warna scrollbar */
+    border-radius: 10px; /* Membuat sudut scrollbar melengkung */
+}
+
+.student {
+    text-align: center;
+    flex: 0 0 100px; /* Ukuran tetap untuk setiap elemen (termasuk foto dan nama) */
+}
+
+.student .profile-pic1 img {
+    width: 100px; /* Lebar gambar */
+    height: 100px; /* Tinggi gambar */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+}
+
+.student .name {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+        .nav-buttons1 {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin: 20px 20px 10px 10px;
+        }
+        .nav-button1 {
+            background-color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 52px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+            font-size: 23px;
+            font-weight: bold;
+            color: #008080;
+        }
+        .nav-button1.active {
+            background-color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            color: #008080;
+        }
+        
+        .footer {
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            padding: 5px 10px;
+            max-width: 600px;
+        }
